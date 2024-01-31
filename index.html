@@ -1,39 +1,85 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Greeting card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
     <style>
-        body {
-            background-image: url('D:\\background-2011751_1280.png');
-            background-size: cover; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+          body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
             height: 100vh;
-            margin: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        h1 {
-            max-width: 40%;
-            background-color: rgba(190, 73, 0, 0.422);
-            padding: 20px;
-            backdrop-filter: blur(1px);
-            border-radius: 15px;
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(5px); /* Adjust the blur effect as needed */
+            z-index: -1;
+            background: url("D:\muichiro_tokito_by_xblakeking_dfvymj7.png") center/cover fixed; /* Replace 'background-image.jpg' with your actual background image */
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+            padding: 20px; 	
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .login-container label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+            box-sizing: border-box;
+        }
+
+        .login-container button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
-
 <body>
-    <h1><b><i>Dear Principal mam,</i></b><br>
-        <br>
-        I wanted to express my heartfelt gratitude for the lovely environment you've created in MERIT. Your unwavering
-        commitment to our education and personal growth has made a lasting impact on us. Your guidance and support have
-        been invaluable, creating an environment that fosters both learning and personal development. Your belief in our
-        potential has inspired us to strive for excellence.
-        Thank you for being a mentor, guide, and a source of strength. Your contributions are truly appreciated and will
-        always be remembered.
-    </h1>
-</body>
+    <div class="background">
+        <!-- Add a div with background image if needed -->
+    </div>
+    <div class="login-container">
+        <h2>Login Form</h2>
+        <form action="#" method="post" onsubmit="openSite()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function openSite() {
+            // Replace the following link with the desired site URL
+            window.location.href = "https://luffysenpai.space/";
+            return false; // Prevent form submission for this example
+        }
+    </script>
+</body>
 </html>
